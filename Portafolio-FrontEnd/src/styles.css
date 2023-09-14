@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+
+.incompleto {
+  box-shadow: 0 0 10px rgb(253, 236, 239); /* Crea una sombra difuminada */
+  transition: box-shadow 0.3s ease;
+}

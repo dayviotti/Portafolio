@@ -1,0 +1,19 @@
+<app-header></app-header>
+<body>
+  <div class="card" id="divLogin">
+    <form method="post" [formGroup]="usuario" (ngSubmit)="login()" class="p-5 col-12">
+      <div class="row text-center pb-4">
+        <h2>INICIAR SESIÓN</h2>
+      </div>
+      <div class="row">
+        <input class="form-control inputSombra" [ngClass]="{'incompleto': usernameIncomp}"  formControlName="username" type="text" name="username" placeholder="Usuario">
+      </div>
+      <div class="row">
+        <input class="form-control inputSombra" [ngClass]="{'incompleto': passwordIncomp}"  formControlName="password" type="password" name="password" placeholder="Contraseña">
+      </div>
+      <div class="row justify-content-center">
+        <button type="submit" class="form-control">Ingresar</button>
+      </div>
+    </form>
+  </div>
+</body>

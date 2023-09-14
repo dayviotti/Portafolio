@@ -1,0 +1,60 @@
+.dropdown-menu {
+  background-color: #360425;
+}
+
+.logo{
+  width: 45px;
+  border-radius: 25%;
+  border: 2px solid;
+  margin-right: 10px;
+}
+
+* {
+  font-family: 'Oswald', serif;
+  font-size: 18px;
+}
+
+.imgred {
+  width: 28px;
+  margin-right: 20px;
+}
+
+.imgig {
+  width: 28px;
+  margin-right: 16px;
+}
+
+.imgfc {
+  width: 28px;
+  margin-right: 20px;
+}
+
+.lkn{
+  width: 32px;
+  margin-right: 16px;
+}
+
+.navbar-toggler {
+  border-color: #360420;
+
+}
+.container-fluid {
+  background-color: #3a0324;
+}
+
+.navbar {
+  background-color: #3a0324;
+}
+
+.offcanvas {
+  background-color: #3a0324;
+}
+
+.offcanvas-body {
+  background-color: #3a0324;
+}
+
+.offcanvas-header {
+  background-color: #250116;
+}
+

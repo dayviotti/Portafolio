@@ -1,0 +1,109 @@
+body{
+  background-color: #410928;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  color: #d2c3ca;
+  font-size: 100px;
+}
+
+h2 {
+  font-family: 'DM Serif Display', serif;
+  color: #d2c3ca;
+  font-size: 70px;
+}
+
+h3 {
+  font-family: 'DM Serif Display', serif;
+  color: #e7b4cd;
+  font-size: 45px;
+}
+
+#intro {
+  margin-left: 100px;
+  margin-right: 200px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.5); /* Inicialmente borroso y reducido */
+  opacity: 0; /* Inicialmente transparente */
+  filter: blur(10px); /* Inicialmente borroso */
+  transition: transform 1s, opacity 0.5s, filter 0.5s; /* Transiciones suaves */
+}
+
+#intro.mostrar {
+  transform: translate(-50%, -50%) scale(1); /* Aparece y vuelve a tamaño normal */
+  opacity: 1; /* Aparece con opacidad total */
+  filter: blur(0); /* Desaparece el efecto de borroso */
+}
+
+#hola {
+  color: #f5af9c;
+}
+
+.oval-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-bottom-right-radius: 18%;
+  border-top-right-radius: 18%;
+  border-bottom-left-radius: 18%;
+  border: 2px solid #ffe9f4; /* Color bordó claro */
+  background-color: #ffe9f4;
+  color: #360425; /* Color del texto */
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+}
+
+.oval-button:hover {
+  background-color: #360425; /* Cambia el color de fondo al pasar el mouse */
+  color: #d2c3ca; /* Cambia el color del texto al pasar el mouse */
+}
+
+#img {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%) scale(0.5); /* Inicialmente borroso y reducido */
+  opacity: 0; /* Inicialmente transparente */
+  filter: blur(10px); /* Inicialmente borroso */
+  transition: transform 1s, opacity 0.5s, filter 0.5s; /* Transiciones suaves */
+}
+
+#img.mostrar {
+  transform: translate(-50%, -50%) scale(1); /* Aparece y vuelve a tamaño normal */
+  opacity: 1; /* Aparece con opacidad total */
+  filter: blur(0); /* Desaparece el efecto de borroso */
+}
+
+#contacto{
+  text-decoration: none;
+  color: #ffe9f4;
+  font-size: 23px;
+  font-family: 'DM Serif Display', serif;
+}
+
+#contacto:hover {
+  color: #8f6b7c; /* Cambia el color del texto al pasar el mouse */
+
+}
+
+@media (max-width: 1200px) {
+  #img {
+    display: none; /* Oculta el div */
+  }
+  #intro{
+    margin-left: 5px;
+    left: 50%;
+  }
+}
+

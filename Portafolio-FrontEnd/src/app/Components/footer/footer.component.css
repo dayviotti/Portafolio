@@ -1,0 +1,15 @@
+footer{
+  background-color: #1a0110;
+  position: relative;
+  width: 100vw;
+  height: 7vh;
+  align-items: center;
+}
+
+p{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1vw;
+  color: #d2c3ca;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
