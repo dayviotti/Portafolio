@@ -1,0 +1,119 @@
+
+
+#divForm{
+  margin: 0;
+  padding: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: #410928;
+}
+
+#divRedes{
+  background-color: #c4b0b6;
+  height: 100vh;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.titulo{
+  margin-top: 15vh;
+}
+h1{
+  font-size: 4.5vw;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+#contactame{
+  color: #d2c3ca;
+}
+
+input{
+  margin-top: 2vh;
+}
+
+textarea{
+  margin-top: 2vh;
+  height: 15vh;
+}
+
+form{
+  padding: 5vh 10vw;
+}
+
+button{
+  background-color: #8f6b7c;
+  border: #8f6b7c;
+  color: #d2c3ca;
+  font-size: 1.5vw;
+  font-family: 'Oswald', sans-serif;
+  width: 30%;
+  margin-top: 3vh;
+}
+
+button:hover{
+  background-color: #d2c3ca;
+  color: #250116;
+}
+
+#intro{
+  margin-top: 5vh;
+  color: #250116;
+  font-size: 1.2vw;
+  font-family: 'Oswald', sans-serif;
+  width: 70%;
+}
+
+#redes{
+  color: #410928;
+}
+
+.logo{
+  width: 7vw;
+}
+
+.redesSoc{
+  width: 40vw;
+}
+
+.trans{
+  transform:  scale(0.5); /* Inicialmente borroso y reducido */
+  opacity: 0; /* Inicialmente transparente */
+  filter: blur(10px); /* Inicialmente borroso */
+  transition: transform 1s, opacity 0.5s, filter 0.5s; /* Transiciones suaves */
+}
+
+.trans.mostrar {
+  transform:  scale(1); /* Aparece y vuelve a tamaño normal */
+  opacity: 1; /* Aparece con opacidad total */
+  filter: blur(0); /* Desaparece el efecto de borroso */
+}
+
+.completo{
+  display: none;
+}
+
+.inputSombra:focus {
+  border: none;
+  box-shadow: 0 0 10px rgb(194, 165, 181); /* Cambia la sombra cuando el input está enfocado */
+}
+
+h5{
+  color: #b699a8;
+  font-family: 'Oswald', sans-serif;
+}
+
+#direccion{
+  color: #8f6b7c;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 0;
+}
+
+.respuesta {
+  display: none;
+}

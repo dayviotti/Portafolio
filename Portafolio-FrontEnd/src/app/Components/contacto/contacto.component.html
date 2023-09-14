@@ -1,0 +1,59 @@
+<app-header></app-header>
+<body class="row">
+  <div class="col-6 text-center" id="divForm">
+    <div class="row text-center titulo" id="contactame">
+      <h1>CONTACTAME</h1>
+    </div>
+    <form class="row mt-5" [formGroup]="contacto" (ngSubmit)="sendEmail()">
+      <div class="row" [ngClass]="{'completo': completo}" id="comp">
+        <h5 class="row justify-content-start">Debes completar todos los campos*</h5>
+      </div>
+      <input formControlName="nombre" [ngClass]="{'incompleto': nombreIncompleto}" name="nombre" class="form-control inputSombra" placeholder="Tu nombre">
+      <input formControlName="email" [ngClass]="{'incompleto': emailIncompleto}" required name="email" class="form-control inputSombra" placeholder="Tu correo">
+      <div *ngIf="contacto.get('email')?.hasError('email') && contacto.get('email')?.touched">
+        <p class="row justify-content-start" id="direccion">Ingresa una dirección de correo electrónico válida.</p>
+      </div>
+      <input formControlName="asunto" [ngClass]="{'incompleto': asuntoIncompleto}" required name="asunto" class="form-control inputSombra" placeholder="Asunto">
+      <textarea formControlName="mensaje" [ngClass]="{'incompleto': mensajeIncompleto}" required name="mensaje" class="form-control inputSombra" placeholder="Mensaje"></textarea>
+      <div class="row justify-content-start">
+        <button type="submit" class="form-control">ENVIAR</button>
+      </div>
+    </form>
+    <div class="row" [ngClass]="{'respuesta': resp}" >
+      <h5 class="row justify-content-center">{{ respuesta }}</h5>
+    </div>
+  </div>
+  <div class="col-6" id="divRedes">
+    <div class="row text-center titulo trans" id="redes" [ngClass]="{'mostrar': mostrarDiv}">
+      <h1>REDES SOCIALES</h1>
+    </div>
+    <div class="redesSoc trans" [ngClass]="{'mostrar': mostrarDiv}">
+      <div class="row text-end pt-5 me-3">
+        <a href="https://www.linkedin.com/in/daiana-viotti/" target="_blank" class="col-6">
+          <img class="logo" title="Linkedin" src="assets/linkedin.png" alt="Linkedin">
+        </a>
+        <a href="https://www.linkedin.com/in/daiana-viotti/" target="_blank" class="col-6">
+          <img class="logo" title="Linkedin" src="assets/github.png" alt="Linkedin">
+        </a>
+      </div>
+      <div class="row text-end pt-5 me-3">
+        <a href="https://www.linkedin.com/in/daiana-viotti/" target="_blank" class="col-6">
+          <img class="logo" title="Instagram" src="assets/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/daiana-viotti/" target="_blank" class="col-6">
+          <img class="logo" title="Whatsapp" src="assets/whatsapp.png" alt="Whatsapp">
+        </a>
+      </div>
+
+    </div>
+
+    <div class="row  intro justify-content-center text-center trans" [ngClass]="{'mostrar': mostrarDiv}">
+      <p id="intro">Si querés saber más de mí, conocerme, trabajar conmigo, ofrecerme un trabajo,
+        preguntarme cualquier cosa, hablar un poco de la programación o de cómo
+        voy desarrollando mi carrera, estás en el lugar indicado. No tengas miedo, hablame,
+        consultame, para eso es este espacio :)
+      </p>
+    </div>
+  </div>
+</body>
+

@@ -1,0 +1,57 @@
+body{
+  background-color: #c4b0b6;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#divLogin{
+  background-color: #360425;
+  width: 400px;
+  height: 500px;
+}
+
+input{
+  margin-bottom: 10%;
+}
+
+h2{
+  margin-top: 10px;
+  color: #e7b4cd;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 50px;
+}
+
+button{
+  background-color: #8f6b7c;
+  border: #8f6b7c;
+  color: #d2c3ca;
+  font-family: 'Oswald', sans-serif;
+  width: 50%;
+}
+
+button:hover{
+  background-color: #d2c3ca;
+  color: #250116;
+}
+
+@media (max-width: 450px) {
+  body{
+    background-color: #250116;
+  }
+  h2{
+    font-size: 40px;
+  }
+  .card{
+    border: #250116;
+  }
+}
+
+.inputSombra:focus {
+  border: none;
+  box-shadow: 0 0 10px rgb(194, 165, 181); /* Cambia la sombra cuando el input está enfocado */
+}

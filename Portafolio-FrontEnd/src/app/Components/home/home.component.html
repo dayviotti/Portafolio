@@ -1,0 +1,14 @@
+<app-header></app-header>
+<body>
+  <div id="intro" [ngClass]="{'mostrar': mostrarDiv}" *ngIf="persona">
+    <h2 id="hola">Hola! Soy</h2>
+    <h1>{{ persona.nombre }}</h1>
+    <h3>{{ persona.titulo }}</h3>
+    <button routerLink="/sobreMi" class="oval-button mt-4">Sobre mí</button>
+    <a class="ms-3" routerLink="/contacto" id="contacto">Contáctame</a>
+  </div>
+<div id="img" [ngClass]="{'mostrar': mostrarDiv}">
+  <img alt="" ngSrc="./assets/dev1.png" height="401" width="622">
+</div>
+</body>
+

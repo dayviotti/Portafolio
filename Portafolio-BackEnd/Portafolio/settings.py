@@ -25,9 +25,6 @@ SECRET_KEY = 'django-insecure-08g!9f#93z#h_lob!q7y$*qnzfhy%v4)atz2yo+7gl)d@di=!x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,7 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'backend'
+    'backend',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +46,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
 ]
 
 ROOT_URLCONF = 'Portafolio.urls'
@@ -79,9 +83,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Portafolio',
         'USER': 'root',
-        'PASSWORD': '1234',
+        'PASSWORD': '123',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '3307',
     }
 }
 
@@ -126,3 +130,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'dayviotti2015@gmail.com'
+EMAIL_HOST_PASSWORD = 'hfcfiyipftcajxkx'
+
+AUTH_USER_MODEL = 'backend.Persona'
